@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Agendamento</h1>
+
+    <form id="agendamento-form">
+        <fieldset>
+            <legend>Dados do paciente</legend>
+            <input name="nome" placeholder="Nome" required />
+            <input name="sobrenome" placeholder="Sobrenome" required />
+            <input name="cpf" placeholder="CPF" required />
+            <input type="date" name="nascimento" required />
+            <input name="telefone" placeholder="Telefone" required />
+            <input name="cep" placeholder="CEP" required />
+            <input name="endereco" placeholder="Endereço" required />
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados da consulta</legend>
+            <select name="clinica" required>
+                <option value="">Selecione a clínica</option>
+                <option value="Clínica A">Clínica A</option>
+                <option value="Clínica B">Clínica B</option>
+            </select>
+
+            <select name="especialidade" required>
+                <option value="">Selecione a especialidade</option>
+                <option value="Cardiologia">Cardiologia</option>
+                <option value="Dermatologia">Dermatologia</option>
+            </select>
+
+            <input type="date" name="data" required />
+            <input type="time" name="hora" required />
+            <textarea name="observacao" placeholder="Observações (opcional)"></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+        <p id="mensagem"></p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
